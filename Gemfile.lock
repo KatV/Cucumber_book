@@ -33,6 +33,8 @@ GEM
     gherkin (5.0.0)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     money (6.11.2)
@@ -76,6 +78,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   cucumber
+  launchy
   money
   rspec
   sinatra

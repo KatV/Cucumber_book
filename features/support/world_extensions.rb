@@ -1,10 +1,12 @@
 # Pushing some of the details down into our World module means
 # the step definition code is at a higher level of abstraction.
 module KnowsTheUserInterface
+
   class UserInterface
     include Capybara::DSL
 
     def withdraw_from(account, amount)
+      Sinatra::Application.account = account
       visit '/'
       fill_in 'Amount', :with => amount
       click_button 'Withdraw'
@@ -17,13 +19,12 @@ module KnowsTheUserInterface
   end
 
   def cash_slot
-    @cash_slot ||= CashSlot.new
+    Sinatra::Application.cash_slot
   end
 
   def teller
     @teller ||= UserInterface.new
   end
 end
-
 
 World(KnowsTheUserInterface)

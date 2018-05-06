@@ -9,5 +9,6 @@ group :development do
   gem 'cucumber'
   gem 'rspec'
   gem 'money'
-  gem 'capybara'
+  gem 'capybara' # web server
+  gem 'launchy' # save_and_open_page method there
 end
