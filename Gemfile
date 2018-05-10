@@ -4,6 +4,7 @@ source :rubygems
 #
 # end
 gem 'sinatra'
+gem 'service_manager'
 
 group :development do
   gem 'cucumber'
