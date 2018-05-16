@@ -12,6 +12,5 @@
 #  hook, which will be run just before the Cucumber process exits.
 
 Before do
-  BalanceStore.new.balance = 0
   TransactionQueue.clear
 end

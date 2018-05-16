@@ -13,7 +13,7 @@ module AsyncSupport
 
     loop do
       begin
-      yield
+        yield
       rescue Exception => error
       end
 

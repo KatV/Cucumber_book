@@ -25,7 +25,7 @@ class TransactionQueue
   def read
     next_message_file = Dir['messages/*'].first
     return unless next_message_file
-    yield
+      yield
       File.read(next_message_file)
     FileUtils.rm_rf(next_message_file)
   end
